@@ -24,8 +24,6 @@ jobs:
 
       - name: Build APK
         run: |
-          # پرانی فائل کو Rename کریں اور بلڈ بنائیں
-          mv MobIslahNafs.py main.py
           flet build apk
 
       - name: Upload APK
