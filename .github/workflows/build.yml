@@ -19,12 +19,14 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
+          # ہم وہ ورژن سیٹ کر رہے ہیں جو فلیٹ کو چاہیے
+          flutter-version: '3.22.2' 
           channel: 'stable'
 
       - name: Build APK
         run: |
-          flet build apk
+          # 'yes' کا اضافہ کیا گیا ہے تاکہ سوالوں کا خودکار جواب مل سکے
+          yes | flet build apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
