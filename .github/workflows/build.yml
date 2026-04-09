@@ -24,8 +24,9 @@ jobs:
 
       - name: Build APK
         run: |
-          # اینڈرائیڈ بلڈ کے لیے کمانڈ
-          flet build apk --target MobIslahNafs.py
+          # پرانی فائل کو Rename کریں اور بلڈ بنائیں
+          mv MobIslahNafs.py main.py
+          flet build apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
